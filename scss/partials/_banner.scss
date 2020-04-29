@@ -1,0 +1,61 @@
+.main-banner {
+    width: auto;
+    height: 80%;
+    background-color: purple;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    color: #4c5454;
+}
+
+.main-banner__slider {
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include light{
+       
+        background-image: url(../../images/bbbbbbbbbbb4light.jpg);
+        
+    }    
+    background-image: url(../../images/bbbbbbbbbbb4.jpg);
+   // background-position: center;
+    //background-position-x: 50%;
+    
+}
+
+.main-banner__content{
+    //border: 1px solid green;
+    height: 50%;
+    
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    .main-banner__header {
+        //border: 1px solid orangered;
+        height: 100%;
+        width: 600px;
+        display: inline-block;
+        font-size: 50px;
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+.btn{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    //font-size: $font-big;
+    //font-weight: $weight-bold;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 6px;
+
+    &--primary{
+      background: $color-primary;
+      color: $color-reset;
+    }
+
+  
+  }

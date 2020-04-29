@@ -1,0 +1,136 @@
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar {
+    padding: 0px 36px 0px 36px;
+    font-size: 16px;
+    display: flex;
+    //background-color: orangered;
+    background: transparent;
+    background-color: rgba(248,245,240,0.2);
+    
+    @include light{
+        display: none;
+    }    
+}
+
+.navbar__social{
+    background-color: papayawhip;
+    height: 100%;
+    display: inline-block;
+}
+
+.nav-list {
+    height: 100%;
+    margin: auto; 
+    padding: 0px;   
+    li {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    a {
+        display: inline-block;
+        height: 100%;
+        color: #4c5454;
+        letter-spacing: 0.1em;
+        padding: 0 9px 0 9px;
+        &::before {
+            content: '';
+            display: block;
+            height: 50%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 50%;
+        }
+        &:hover {
+           color: #ff907f;
+        }
+    }  
+}
+
+.logo-container {
+    padding: 18px;
+    
+    .logo-image {
+        height: 100px;
+        width: 100px;
+        img {
+            width: auto;
+            height: 100%;
+            display: block;
+            margin: auto; 
+                      
+        }   
+    }
+    .logo-image--mobile{
+        display: none;
+    }
+}
+
+
+.navbar__main {
+    display: flex;
+    justify-content: center;
+    width: 90%; 
+    //background-color: palegreen;
+
+}
+
+
+.navbar-mobile {
+    display: none;
+    @include light{
+        display: flex;
+        //background-color: peru;
+        justify-content: space-between;
+        .logo-image--mobile{
+            display: inline-block;
+            height: 75px;
+            width: 75px;
+        }
+        .hamburger-trigger{
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 6px;
+            position: relative;
+            background: transparent;
+            
+            .lines{
+                position: relative;
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                border-radius: 5px;
+                background-color: #4c5454;
+                 &::before, &::after{
+                content: "";
+                left: 0;
+                position: absolute;
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                border-radius: 5px;
+                background-color: #4c5454;
+                }
+            }
+          }
+          .lines::after {
+              top: 6px;
+          }
+          .lines::before {
+            top: -6px;
+        }
+    }
+
+}
+
+
