@@ -7,3 +7,27 @@
     @content;
   }
 }
+
+@mixin mobile_land {
+  @media all and (min-width: 576px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin tablet_land {
+  @media all and (min-width: 992px){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1200px){
+    @content;
+  }
+}

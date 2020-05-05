@@ -1,4 +1,4 @@
-header {
+.main__header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     position: absolute;
@@ -7,15 +7,17 @@ header {
 }
 
 .navbar {
-    padding: 0px 36px 0px 36px;
-    font-size: 16px;
-    display: flex;
-    //background-color: orangered;
-    background: transparent;
-    background-color: rgba(248,245,240,0.2);
+    display: none;
     
-    @include light{
-        display: none;
+    @include tablet_land{
+        
+
+        padding: 0px 36px 0px 36px;
+        font-size: 16px;
+        display: flex;
+        //background-color: orangered;
+        background: transparent;
+        background-color: rgba(248,245,240,0.2);
     }    
 }
 
@@ -87,31 +89,29 @@ header {
 
 
 .navbar-mobile {
-    display: none;
-    @include light{
-        display: flex;
-        //background-color: peru;
-        justify-content: space-between;
-        .logo-image--mobile{
-            display: inline-block;
-            height: 75px;
-            width: 75px;
-        }
-        .hamburger-trigger{
-            cursor: pointer;
-            padding: 8px 20px;
-            border-radius: 6px;
-            position: relative;
-            background: transparent;
+    display: flex;
+    //background-color: peru;
+    justify-content: space-between;
+    .logo-image--mobile{
+        display: inline-block;
+        height: 75px;
+         width: 75px;
+    }
+    .hamburger-trigger{
+        cursor: pointer;
+        padding: 8px 20px;
+        border-radius: 6px;
+        position: relative;
+        background: transparent;
             
-            .lines{
-                position: relative;
-                display: inline-block;
-                width: 20px;
-                height: 2px;
-                border-radius: 5px;
-                background-color: #4c5454;
-                 &::before, &::after{
+        .lines{
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            border-radius: 5px;
+            background-color: #4c5454;
+                &::before, &::after{
                 content: "";
                 left: 0;
                 position: absolute;
@@ -120,17 +120,19 @@ header {
                 height: 2px;
                 border-radius: 5px;
                 background-color: #4c5454;
-                }
             }
-          }
-          .lines::after {
-              top: 6px;
-          }
-          .lines::before {
-            top: -6px;
         }
     }
-
+    .lines::after {
+        top: 6px;
+    }
+    .lines::before {
+        top: -6px;
+    }
+    @include tablet_land{
+        display: none;
+    }
+    
 }
 
 

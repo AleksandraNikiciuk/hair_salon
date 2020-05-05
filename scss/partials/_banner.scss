@@ -1,6 +1,7 @@
 .main-banner {
     width: auto;
     height: 80%;
+    
     background-color: purple;
     position: relative;
     font-family: 'Playfair Display', serif;
@@ -8,54 +9,64 @@
 }
 
 .main-banner__slider {
-    height: 70vh;
+    height: 100%;
+    width: auto;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    @include light{
-       
-        background-image: url(../images/bbbbbbbbbbb4light-min.jpg);
-        
-    }    
-    background-image: url(/images/bbbbbbbbbbb4-min.jpg);
-   // background-position: center;
-    //background-position-x: 50%;
-    
+    background-image: url(../images/c5light.jpg);
+    @include mobile_land{
+        background-image: url(../images/bbbbbbbbbbb4-min.jpg);    
+    }     
 }
 
 .main-banner__content{
     //border: 1px solid green;
-    height: 50%;
-    
+    //height: 50%;
+    //border: 1px solid brown;
     display: inline-block;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    bottom: 2%;
+    margin: 0 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: $color-slider;
+    
     .main-banner__header {
-        //border: 1px solid orangered;
-        height: 100%;
-        width: 600px;
-        display: inline-block;
-        font-size: 50px;
+        margin: 10px auto;      
+        width: 90%;
+       // display: inline-block;
+        //background-color: lawngreen;
+        
+        font-size: 24px;
         font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+    .main-banner__article{
+        width: 80%;
+        margin: 10px auto; 
+        display: block;
+        text-align: justify;
+        // background-color: lightpink;
     }
 }
 
 .btn{
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-    border: none;
-    background: none;
-    //font-size: $font-big;
-    //font-weight: $weight-bold;
+    display: block;
+    width: 50%;
+    margin: 0 auto; 
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    padding: 15px 30px;
+    padding: 15px 15px;
     border-radius: 6px;
 
     &--primary{
       background: $color-primary;
       color: $color-reset;
     }
-
+    &:hover{
+        background-color: $color-hover;
+    }
   
   }
