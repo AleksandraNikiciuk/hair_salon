@@ -1,28 +1,31 @@
 .main-banner {
     width: auto;
-    height: 80%;
-    
+    height: 70%;
     background-color: purple;
     position: relative;
     font-family: 'Playfair Display', serif;
     color: #4c5454;
 }
-
 .main-banner__slider {
     height: 100%;
     width: auto;
+    min-height: 425px;
     position: relative;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-image: url(../images/c5light.jpg);
-    @include mobile_land{
-        background-image: url(../images/bbbbbbbbbbb4-min.jpg);    
+    background-image: url(../images/c6.jpg);
+    @include mobile{
+        background-image: url(../images/c7.jpg);
+        min-height: 520px;   
+    } 
+    @include mobile_wide{
+        background-image: url(../images/bbbbbbbbbbb4-min.jpg); 
+        background-position: 10% 0%; 
+        min-height: 425px;       
     }     
 }
-
 .main-banner__content{
-    //border: 1px solid green;
-    //height: 50%;
     //border: 1px solid brown;
     display: inline-block;
     position: absolute;
@@ -31,36 +34,57 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: $color-slider;
-    
+    @include mobile{
+       width: 45%;
+       left: 48%; 
+       top: 20%;
+    }
+    @include mobile_wide{
+        top: 30%; 
+    }
+    @include desktop{
+        left: 40%; 
+    }
     .main-banner__header {
         margin: 10px auto;      
         width: 90%;
-       // display: inline-block;
-        //background-color: lawngreen;
-        
         font-size: 24px;
         font-family: 'Playfair Display', serif;
         font-weight: 600;
         letter-spacing: 0.1em;
+        @include mobile_wide{
+            font-size: 30px;
+        }  
     }
     .main-banner__article{
-        width: 80%;
+        width: 90%;
         margin: 10px auto; 
         display: block;
         text-align: justify;
-        // background-color: lightpink;
     }
 }
-
+.main-banner__container {
+    @include mobile {
+        // border: 1px solid green;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 .btn{
     display: block;
-    width: 50%;
+    width: auto;
     margin: 0 auto; 
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 15px 15px;
     border-radius: 6px;
-
+    @include mobile_wide{
+        font-size: 16px;
+    }
+    @include desktop {
+        padding: 20px 20px;
+    }
     &--primary{
       background: $color-primary;
       color: $color-reset;
@@ -68,5 +92,4 @@
     &:hover{
         background-color: $color-hover;
     }
-  
-  }
+}

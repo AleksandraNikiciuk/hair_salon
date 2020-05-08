@@ -2,14 +2,16 @@
   box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
-@mixin light {
-  @media all and (max-width: 980px){
+
+
+@mixin mobile {
+  @media all and (min-width: 420px){
     @content;
   }
 }
 
-@mixin mobile_land {
-  @media all and (min-width: 576px){
+@mixin mobile_wide {
+  @media all and (min-width: 680px) {
     @content;
   }
 }
@@ -20,7 +22,7 @@
   }
 }
 
-@mixin tablet_land {
+@mixin tablet_wide {
   @media all and (min-width: 992px){
     @content;
   }
