@@ -14,9 +14,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/c6.jpg);
+    background-image: url(../images/c6-min.jpg);
     @include mobile{
-        background-image: url(../images/c7.jpg);
+        background-image: url(../images/c7-min.jpg);
         min-height: 520px;   
     } 
     @include mobile_wide{
